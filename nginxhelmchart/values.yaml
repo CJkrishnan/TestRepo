@@ -1,0 +1,8 @@
+replicaCount: 3
+
+namespace: testmay22
+
+image:
+  repository: nginx
+  version: 1.14.2
+  pullPolicy: IfNotPresent
