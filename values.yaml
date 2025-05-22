@@ -1,0 +1,6 @@
+replicaCount: 3
+
+image:
+  repository: nginx
+  version: 1.14.2
+  pullPolicy: IfNotPresent
