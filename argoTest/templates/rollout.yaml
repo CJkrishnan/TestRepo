@@ -1,34 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: {{ include "argorollout-chart.fullname" . }}
+  name: argo-nginx
   namespace: {{ .Values.namespace }}
   labels:
-    app: {{ include "argorollout-chart.name" . }}
+    app: argo-nginx
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "argorollout-chart.name" . }}
+      app: argo-nginx
   template:
     metadata:
       labels:
-        app: {{ include "argorollout-chart.name" . }}
+        app: argo-nginx
     spec:
       containers:
-        - name: {{ .Chart.Name }}
+        - name: argo-nginx
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.service.port }}
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
-      nodeSelector:
-        {{- toYaml .Values.nodeSelector | nindent 8 }}
-      tolerations:
-        {{- toYaml .Values.tolerations | nindent 8 }}
-      affinity:
-        {{- toYaml .Values.affinity | nindent 8 }}
   strategy:
     canary:
       {{- toYaml .Values.strategy.canary | nindent 6 }}
