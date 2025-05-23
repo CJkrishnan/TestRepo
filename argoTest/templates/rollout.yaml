@@ -22,13 +22,13 @@ spec:
           ports:
             - containerPort: {{ .Values.service.port }}
   strategy:
-  canary:
-    steps:
-      - setWeight: 20
-      - pause:
-          duration: 30
-      - setWeight: 20
-      - pause: {}
-      - setWeight: 50
-      - pause:
-          duration: 10
+    canary:
+      steps:
+        - setWeight: 20
+        - pause:
+            duration: 30
+        - setWeight: 20
+        - pause: {}
+        - setWeight: 50
+        - pause:
+            duration: 10
