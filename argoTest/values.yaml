@@ -1,4 +1,4 @@
-namespace: default
+namespace: testmay22
 
 replicaCount: 3
 
