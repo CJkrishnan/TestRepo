@@ -4,7 +4,7 @@ replicaCount: 3
 
 image:
   repository: nginx
-  tag: 1.28.0
+  tag: 1.91.0
   pullPolicy: IfNotPresent
 
 strategy:
