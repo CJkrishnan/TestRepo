@@ -1,18 +1,10 @@
-#replicaCount: 3
-
-#namespace: testmay22
-
-#image:
-#  repository: nginx
-#  version: 1.14.2
-#  pullPolicy: IfNotPresent
 namespace: testmay22
 
 replicaCount: 3
 
 image:
   repository: nginx
-  tag: 1.91.0
+  tag: 1.27.5
   pullPolicy: IfNotPresent
 
 strategy:
