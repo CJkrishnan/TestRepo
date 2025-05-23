@@ -1,8 +1,40 @@
-replicaCount: 3
+#replicaCount: 3
 
+#namespace: testmay22
+
+#image:
+#  repository: nginx
+#  version: 1.14.2
+#  pullPolicy: IfNotPresent
 namespace: testmay22
+
+replicaCount: 3
 
 image:
   repository: nginx
-  version: 1.14.2
+  tag: 1.91.0
   pullPolicy: IfNotPresent
+
+strategy:
+  canary:
+    steps:
+      - setWeight: 20
+      - pause: { duration: 30s }
+      - setWeight: 20
+      - pause: {}
+      - setWeight: 50
+      - pause: { duration: 30s }
+
+service:
+  name: argorollout-service
+  type: ClusterIP
+  port: 80
+  targetPort: 80
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
