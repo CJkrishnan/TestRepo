@@ -18,7 +18,10 @@ strategy:
       - pause: { duration: 30s }
 
 service:
+  name: argorollout-service
+  type: ClusterIP
   port: 80
+  targetPort: 80
 
 resources: {}
 
