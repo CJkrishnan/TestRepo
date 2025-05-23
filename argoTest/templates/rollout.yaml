@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argo-nginx
+  name: nginx
   namespace: {{ .Values.namespace }}
   labels:
-    app: argo-nginx
+    app: nginx
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: argo-nginx
+      app: nginx
   template:
     metadata:
       labels:
-        app: argo-nginx
+        app: nginx
     spec:
       containers:
-        - name: argo-nginx
+        - name: nginx
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
