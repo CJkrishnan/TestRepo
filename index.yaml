@@ -9,7 +9,7 @@ entries:
     name: broken-chart
     type: application
     urls:
-    - https://raw.githubusercontent.com/CJkrishnan/TestRepo/main/broken-chart-1.0.0.tgz
+    - https://raw.githubusercontent.com/CJkrishnan/TestRepo/test-helm-repo/broken-chart-1.0.0.tgz
     version: 1.0.0
   nginx-test:
   - apiVersion: v2
@@ -20,7 +20,7 @@ entries:
     name: nginx-test
     type: application
     urls:
-    - https://raw.githubusercontent.com/CJkrishnan/TestRepo/main/nginx-test-1.0.0.tgz
+    - https://raw.githubusercontent.com/CJkrishnan/TestRepo/test-helm-repo/nginx-test-1.0.0.tgz
     version: 1.0.0
   redis-test:
   - apiVersion: v2
@@ -31,6 +31,6 @@ entries:
     name: redis-test
     type: application
     urls:
-    - https://raw.githubusercontent.com/CJkrishnan/TestRepo/main/redis-test-1.0.0.tgz
+    - https://raw.githubusercontent.com/CJkrishnan/TestRepo/test-helm-repo/redis-test-1.0.0.tgz
     version: 1.0.0
 generated: "2026-04-08T09:42:29.811539+05:30"
