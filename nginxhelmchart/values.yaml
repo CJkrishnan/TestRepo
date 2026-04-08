@@ -3,6 +3,6 @@ replicaCount: 2
 namespace: testmay22
 
 image:
-  repository: nginxinv
+  repository: nginx
   version: 1.28.0
   pullPolicy: IfNotPresent
