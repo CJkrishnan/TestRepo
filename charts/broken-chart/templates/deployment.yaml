@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-broken
+spec:
+  replicas: {{ .Values.replicaCount }}  # This will fail because values.yaml is missing
+  selector:
+    matchLabels:
+      app: broken-app
+  template:
+    metadata:
+      labels:
+        app: broken-app
+    spec:
+      containers:
+      - name: broken-container
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"  # Missing values
+        ports:
+        - containerPort: 80

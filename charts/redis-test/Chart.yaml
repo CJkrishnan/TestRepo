@@ -1,0 +1,9 @@
+apiVersion: v2
+name: redis-test
+description: Test Redis Helm chart for CD/RO testing
+
+type: application
+
+version: 1.0.0
+
+appVersion: "6.2.0"

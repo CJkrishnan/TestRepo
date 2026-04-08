@@ -1,0 +1,36 @@
+apiVersion: v1
+entries:
+  broken-chart:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-04-08T09:42:29.814204+05:30"
+    description: This is intentionally broken chart for testing
+    digest: invalid-digest-for-broken-chart
+    name: broken-chart
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/CJkrishnan/TestRepo/main/broken-chart-1.0.0.tgz
+    version: 1.0.0
+  nginx-test:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-08T09:42:29.814204+05:30"
+    description: Test Nginx Helm chart for CD/RO testing
+    digest: dba0aa0fe608b9f22976c344357d77a8a439047f14312383583b1c716d70df0a
+    name: nginx-test
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/CJkrishnan/TestRepo/main/nginx-test-1.0.0.tgz
+    version: 1.0.0
+  redis-test:
+  - apiVersion: v2
+    appVersion: 6.2.0
+    created: "2026-04-08T09:42:29.814969+05:30"
+    description: Test Redis Helm chart for CD/RO testing
+    digest: e9a38a9cb038ee24ebca25dc79687944c27f972c614c8e4515e8b12e883d4f12
+    name: redis-test
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/CJkrishnan/TestRepo/main/redis-test-1.0.0.tgz
+    version: 1.0.0
+generated: "2026-04-08T09:42:29.811539+05:30"
