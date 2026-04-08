@@ -12,7 +12,7 @@ This is a test Helm repository with multiple charts designed to test Helm v4 bre
 
 Add this repository to your Helm:
 ```bash
-helm repo add test-repo https://raw.githubusercontent.com/CJkrishnan/TestRepo/main/
+helm repo add test-repo https://raw.githubusercontent.com/CJkrishnan/TestRepo/test-helm-repo/
 helm repo update
 ```
 
